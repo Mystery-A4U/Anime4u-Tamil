@@ -1,0 +1,1 @@
+import "./globals.css";import Header from "@/components/Header";export const metadata={title:"Anime4u.Tamil",description:"Anime, movies and Tamil cinema"};export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body><div className="noise"/><Header/>{children}</body></html>}
