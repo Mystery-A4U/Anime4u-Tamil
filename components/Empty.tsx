@@ -1,1 +1,1 @@
-export default function Empty({title='Nothing here yet',text='No media has been published in this section yet.'}:{title?:string;text?:string}){return <div className="empty"><h2>{title}</h2><p>{text}</p></div>}
+export default function Empty({title,text}:{title:string;text:string}){return <div className="empty"><div className="emptyline"/><h2>{title}</h2><p>{text}</p></div>}

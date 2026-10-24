@@ -1,2 +1,3 @@
 import Link from 'next/link';
-export default function Card({title,type='Media',href='#'}:{title:string;type?:string;href?:string}){return <Link href={href} className="cat"><span className="num">{type}</span><div><h3>{title}</h3><p>Browse available titles</p></div><span className="go">OPEN →</span></Link>}
+import type {MediaItem} from '@/lib/api';
+export default function Card({item}:{item:MediaItem}){return <Link href={`/title/${item.id}`} className="card">{item.poster?<img src={item.poster} alt=""/>:<div className="posterblank">A4U</div>}<div><strong>{item.title}</strong><small>{item.type}</small></div></Link>}

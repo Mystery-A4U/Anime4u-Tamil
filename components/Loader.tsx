@@ -1,1 +1,1 @@
-export default function Loader(){return <div className="empty"><p>Loading…</p></div>}
+export default function Loader(){return <div className="loader" aria-label="Loading">A4U</div>}
