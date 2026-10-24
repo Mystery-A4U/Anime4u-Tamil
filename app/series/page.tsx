@@ -1,2 +1,2 @@
-import Empty from '@/components/Empty';
-export default function Series(){return <div className="container"><section className="pagehead"><h1>Series</h1><p>TV shows, anime series and K Drama.</p></section><Empty title="Series are coming soon" text="Connect the Anime4u API to display real titles here. No demo or mock catalogue is used."/></div>}
+import {getMedia} from '@/lib/api';import Card from '@/components/Card';import Empty from '@/components/Empty';
+export default async function Series(){const items=await getMedia('tv');return <main className="container"><section className="pagehead"><h1>Series</h1><p>TV shows, series and continuing titles.</p></section>{items.length?<div className="cards">{items.map(x=><Card key={x.id} item={x}/>)}</div>:<Empty title="No series available" text="Connect the Anime4u API to display real titles. No demo catalogue is used."/>}</main>}
