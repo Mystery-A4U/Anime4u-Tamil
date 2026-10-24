@@ -1,2 +1,1 @@
-import {getMedia} from '@/lib/api';import Card from '@/components/Card';import Empty from '@/components/Empty';
-export default async function TamilMovies(){const items=await getMedia('tamil-movies');return <main className="container"><section className="pagehead"><h1>Tamil Movies</h1><p>Tamil films from the real Anime4u API.</p></section>{items.length?<div className="cards">{items.map(x=><Card key={x.id} item={x}/>)}</div>:<Empty title="No Tamil movies available" text="Connect the Anime4u API to display real titles. No demo or mock catalogue is used."/>}</main>}
+import Catalog from '@/app/catalog'; export default function Page(){return <Catalog title="Tamil Movies" description="Tamil films from the Anime4u catalogue." type="tamil-movies"/>}
