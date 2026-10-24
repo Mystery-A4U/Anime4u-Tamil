@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "strict": true,
     "noEmit": true,
@@ -13,8 +13,9 @@
     "incremental": true,
     "plugins": [{"name":"next"}],
     "baseUrl": ".",
-    "paths": {"@/*":["./*"]}
+    "paths": {"@/*": ["./*"]},
+    "skipLibCheck": true
   },
-  "include": ["next-env.d.ts",".next/types/**/*.ts","**/*.ts","**/*.tsx"],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
