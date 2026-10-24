@@ -1,3 +1,7 @@
-const API=process.env.NEXT_PUBLIC_API_URL||"http://localhost:8000/api";
-async function get<T>(path:string):Promise<T>{const r=await fetch(API+path,{cache:"no-store"});if(!r.ok)throw Error(String(r.status));return r.json()}
-export const api={featured:()=>get<any[]>("/titles/featured"),titles:(t:string)=>get<any[]>(`/titles?type=${t}`),title:(id:string)=>get<any>(`/titles/${id}`),episodes:(id:string)=>get<any[]>(`/titles/${id}/episodes`),episode:(id:string)=>get<any>(`/episodes/${id}`),search:(q:string)=>get<any[]>(`/search?q=${encodeURIComponent(q)}`),comments:(id:string)=>get<any[]>(`/titles/${id}/comments`)};
+export type MediaType='anime'|'movies'|'tv'|'kdrama';
+export type MediaItem={id:string;title:string;type:MediaType;poster?:string};
+const API=process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/,'');
+export async function getMedia(type:MediaType):Promise<MediaItem[]>{
+ if(!API)return [];
+ try{const r=await fetch(`${API}/api/titles?type=${encodeURIComponent(type)}`,{next:{revalidate:30}});if(!r.ok)return [];return r.json();}catch{return []}
+}
