@@ -1,0 +1,2 @@
+import {api} from '@/lib/api';import Empty from '@/components/Empty';
+export default async function Title({params}:{params:{id:string}}){const item=await api.title(params.id);return <main className="container">{item?<section className="pagehead"><h1>{item.title}</h1><p>{item.description||item.type}</p></section>:<Empty title="Title not found" text="This title is not available from the connected Anime4u API."/>}</main>}
