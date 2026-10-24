@@ -1,1 +1,2 @@
-import Catalog from "@/app/catalog";export default function Page(){return <Catalog type="anime-movies" title="Anime Movies"/>}
+import {getMedia} from '@/lib/api';import Card from '@/components/Card';import Empty from '@/components/Empty';
+export default async function AnimeMovies(){const items=await getMedia('anime-movies');return <main className="container"><section className="pagehead"><h1>Anime Movies</h1><p>Anime films from the real Anime4u API.</p></section>{items.length?<div className="cards">{items.map(x=><Card key={x.id} item={x}/>)}</div>:<Empty title="No anime movies available" text="Connect the Anime4u API to display real titles. No demo catalogue is used."/>}</main>}
