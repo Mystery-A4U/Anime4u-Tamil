@@ -3,7 +3,7 @@
 import {usePathname} from "next/navigation";
 
 const items = [
-  {label:"Animovies", href:"/movies", kind:"search"},
+  {label:"Animovies", href:"/movies", kind:"circle"},
   {label:"Animes", href:"/anime-series", kind:"circle"},
   {label:"Home", href:"/", kind:"home"},
   {label:"Series", href:"/series", kind:"circle"},
@@ -23,11 +23,6 @@ export default function BottomNav(){
             aria-label={item.label}
             className={`bottom-item ${pathname===item.href ? "is-active" : ""} ${item.kind==="home" ? "home-item" : ""}`}
           >
-            {item.kind==="search" && (
-              <span className="bottom-image-wrap">
-                <img className="bottom-image search-image" src="/assets/navbar-search.png" alt="" />
-              </span>
-            )}
             {item.kind==="home" && (
               <span className="bottom-image-wrap home-image-wrap">
                 <img className="bottom-image home-image" src="/assets/navbar-home.png" alt="" />
@@ -38,7 +33,7 @@ export default function BottomNav(){
                 <span>{item.label}</span>
               </span>
             )}
-            <span className="bottom-label">{item.label}</span>
+            {item.kind==="home" && <span className="bottom-label">Home</span>}
           </a>
         ))}
       </div>
