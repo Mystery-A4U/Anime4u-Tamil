@@ -1,3 +1,7 @@
-# Anime4u — logo + loading asset v1
+# Anime4u — Curved Navigation v1
 
-This build adds the supplied Anime4u PNG as the top-left brand mark and a full-screen loading animation using the supplied Anime4u artwork. The loader fills the logo from bottom to top in Anime4u pink before revealing the page.
+Updated layout:
+- Top bar contains only the Anime4u PNG logo and Sign in.
+- Bottom curved navigation contains Animovies, Animes, Home, Series and Tamil.
+- Home is centered and raised above the curved bar.
+- Plain CSS only; no Tailwind or animation library.
