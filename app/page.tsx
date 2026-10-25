@@ -1,6 +1,6 @@
 export default function Home(){
 return <main className="site">
-<header className="nav"><a className="logo" href="/">Anime4u</a><nav><a className="active" href="/">Home</a><a href="/series">Series</a><a href="/movies">Movies</a></nav><a className="signin" href="/login">Sign in</a></header>
+<header className="nav"><a className="logo-image" href="/" aria-label="Anime4u home"><img src="/assets/anime4u-logo.png" alt="Anime4u"/></a><nav><a className="active" href="/">Home</a><a href="/series">Series</a><a href="/movies">Movies</a></nav><a className="signin" href="/login">Sign in</a></header>
 <section className="hero"><p className="eyebrow">ANIME4U</p><h1>Simple. Fast.<br/><span>Anime.</span></h1><p className="lead">A practical index for finding anime, movies and shows. No clutter. Just the content you are looking for.</p></section>
 <section className="section"><div className="section-head"><h2>Quick menu</h2><span>Browse</span></div><div className="grid">
 <a href="/movies" className="tile"><b>Movies</b><small>Anime & movies</small></a>
