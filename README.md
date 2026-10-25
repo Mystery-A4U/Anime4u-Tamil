@@ -1,4 +1,3 @@
-# Anime4u CLEAN v3
-Minimal static-first Anime4u frontend. The homepage uses plain CSS and no API, Tailwind, Framer Motion, or client-side rendering, so the landing page can render independently of the backend.
+# Anime4u — logo + loading asset v1
 
-Deploy by replacing the repository contents with this project.
+This build adds the supplied Anime4u PNG as the top-left brand mark and a full-screen loading animation using the supplied Anime4u artwork. The loader fills the logo from bottom to top in Anime4u pink before revealing the page.
