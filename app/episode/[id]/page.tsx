@@ -1,2 +1,0 @@
-import { api } from '@/lib/api';
-export default async function EpisodePage({params}:{params:{id:string}}){const e=await api.episode(params.id);return <main className="container"><section className="page-head"><p className="eyebrow">ANIME4U / EPISODE</p><h1>{e?.title||'Episode'}</h1></section><section className="empty-state"><div className="hero-rule"/><h2>{e?.stream_url?'Stream ready.':'Secure stream URL is not available yet.'}</h2></section></main>}
