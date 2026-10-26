@@ -1,7 +1,7 @@
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:#030304;color:#f7f7f8;font-family:Arial,Helvetica,sans-serif}
 html{-webkit-tap-highlight-color:transparent}
-body{min-height:100vh;background:radial-gradient(circle at 85% 12%,rgba(255,23,107,.11),transparent 28%),radial-gradient(circle at 10% 55%,rgba(255,23,107,.055),transparent 25%),#030304}
+body{min-height:100vh;background:linear-gradient(rgba(3,3,4,.45),rgba(3,3,4,.72)),url("/assets/anime4u-background.jpg") center center/cover fixed no-repeat}
 a,button{ -webkit-tap-highlight-color:transparent;tap-highlight-color:transparent;outline:none}
 a:focus,a:active,button:focus,button:active{outline:none;background-color:transparent}
 .app-shell{min-height:100vh;padding-bottom:125px}
