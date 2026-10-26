@@ -1,0 +1,148 @@
+/* Optional styles for the database pages.
+   Copy these rules into app/style.css if you want the integration pages
+   to use the same premium Anime4u theme. */
+
+.db-search input {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 16px;
+  background: rgba(255,255,255,.05);
+  color: inherit;
+  font: inherit;
+}
+
+.anime-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.anime-card {
+  display: flex;
+  gap: 14px;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.anime-card img,
+.poster-placeholder {
+  width: 74px;
+  height: 105px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex: 0 0 auto;
+}
+
+.poster-placeholder {
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.08);
+  font-weight: 800;
+}
+
+.anime-card small {
+  display: block;
+  margin-top: 6px;
+  opacity: .65;
+}
+
+.anime-detail {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 28px;
+  align-items: start;
+  padding: 32px 0;
+}
+
+.anime-detail-poster img,
+.poster-placeholder.large {
+  width: 220px;
+  min-height: 320px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.synopsis {
+  line-height: 1.7;
+  opacity: .82;
+}
+
+.meta-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.meta-row span {
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-size: 13px;
+}
+
+.episode-list {
+  display: grid;
+  gap: 10px;
+}
+
+.episode-item {
+  display: grid;
+  gap: 4px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 16px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.episode-item small {
+  opacity: .55;
+}
+
+.watch-header {
+  padding: 30px 0 18px;
+}
+
+.player-shell {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.player-placeholder {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.muted {
+  opacity: .65;
+}
+
+@media (max-width: 700px) {
+  .anime-detail {
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+  }
+
+  .anime-detail-poster img,
+  .poster-placeholder.large {
+    width: 120px;
+    min-height: 180px;
+  }
+}

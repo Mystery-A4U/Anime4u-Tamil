@@ -1,0 +1,33 @@
+/* Anime4u full-page background
+   Import this stylesheet from app/layout.tsx:
+   import "./anime4u-background.css";
+*/
+html, body {
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  background: #08050a;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    url("/assets/anime4u-background.jpg")
+    center center / cover
+    no-repeat;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(5, 3, 7, 0.46);
+  pointer-events: none;
+}
